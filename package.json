@@ -12,8 +12,10 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "@elysiajs/html": "^0.6.5",
-    "elysia": "^0.6.23",
+    "@elysiajs/html": "^0.6.6",
+    "@kitajs/html": "^2.2.2",
+    "@kitajs/ts-html-plugin": "^1.0.1",
+    "elysia": "^0.6.24",
     "typed-html": "^3.0.1"
   }
 }
