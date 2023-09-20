@@ -5,6 +5,7 @@
 - Elysia
 - htmx
 - sqlite (instead of Turso for convenience)
+- hyperscript
 
 
 To install dependencies:

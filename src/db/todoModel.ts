@@ -1,15 +1,26 @@
 import { Database } from "bun:sqlite";
 import { Todo } from "../types";
+import { integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
 
+
+const todos = sqliteTable('todos', {
+    id: integer('id', { mode: 'number' }).primaryKey({ autoIncrement: true }),
+    content: text('content').notNull(),
+    done: integer('done', { mode: 'boolean' }).notNull().default(false),
+})
+
+type Todos = typeof todos
 
 
 const db = new Database("todos.sqlite", { create: true })
+
 
 type TodoDB = {
     id: number,
     content: string,
     done: 0 | 1,
 }
+
 
 function createTodosTable() {
     const sql_create = `
